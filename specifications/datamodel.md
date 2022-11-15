@@ -21,6 +21,7 @@
 - __measurements__
   - Type: Measurements
   - Description: Date of the measurement.
+  - Multiple: True
 
 ### Measurements
 
