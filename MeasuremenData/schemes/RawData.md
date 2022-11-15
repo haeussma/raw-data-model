@@ -14,7 +14,7 @@ classDiagram
     
     class Measurements {
         +float initial_substrate
-        +Data data
+        +Data[0..*] data
     }
     
     class Data {

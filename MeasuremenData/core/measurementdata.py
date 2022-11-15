@@ -45,13 +45,13 @@ class MeasurementData(sdRDM.DataModel):
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="a609d6a21561682ca3b5e350138a35e2ba3ccdc7"
+        default="ff1caee19bba76cb7f5f11ee5f195d5dab5b702a"
     )
 
     def add_to_measurements(
         self,
+        data: List[Data],
         initial_substrate: Optional[float] = None,
-        data: Optional[Data] = None,
         id: Optional[str] = None,
     ) -> None:
         """
@@ -63,13 +63,13 @@ class MeasurementData(sdRDM.DataModel):
             id (str): Unique identifier of the 'Measurements' object. Defaults to 'None'.
 
 
+            data (List[Data]): Replicates of a measurement.
+
+
             initial_substrate (Optional[float]): Initial substrate concentration of the reaction. Defaults to None
-
-
-            data (Optional[Data]): Replicates of a measurement. Defaults to None
         """
 
-        params = {"initial_substrate": initial_substrate, "data": data}
+        params = {"data": data, "initial_substrate": initial_substrate}
         if id is not None:
             params["id"] = id
         measurements = [Measurements(**params)]

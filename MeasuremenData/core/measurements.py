@@ -2,6 +2,7 @@ import sdRDM
 
 from typing import Optional, Union
 from typing import Optional
+from typing import List
 from pydantic import PrivateAttr
 from pydantic import Field
 from sdRDM.base.listplus import ListPlus
@@ -21,8 +22,8 @@ class Measurements(sdRDM.DataModel):
         description="Initial substrate concentration of the reaction.", default=None
     )
 
-    data: Optional[Data] = Field(
-        description="Replicates of a measurement", default=None
+    data: List[Data] = Field(
+        description="Replicates of a measurement", default_factory=ListPlus
     )
 
     __repo__: Optional[str] = PrivateAttr(
@@ -30,5 +31,24 @@ class Measurements(sdRDM.DataModel):
     )
 
     __commit__: Optional[str] = PrivateAttr(
-        default="a609d6a21561682ca3b5e350138a35e2ba3ccdc7"
+        default="ff1caee19bba76cb7f5f11ee5f195d5dab5b702a"
     )
+
+    def add_to_data(self, replicates: List[float], id: Optional[str] = None) -> None:
+        """
+        Adds an instance of 'Data' to the attribute 'data'.
+
+        Args:
+
+
+            id (str): Unique identifier of the 'Data' object. Defaults to 'None'.
+
+
+            replicates (List[float]): Measurement series.
+        """
+
+        params = {"replicates": replicates}
+        if id is not None:
+            params["id"] = id
+        data = [Data(**params)]
+        self.data = self.data + data

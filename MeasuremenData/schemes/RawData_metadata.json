@@ -33,7 +33,8 @@
         "description": "Initial substrate concentration of the reaction."
       },
       "data": {
-        "description": "Replicates of a measurement"
+        "description": "Replicates of a measurement",
+        "multiple": "True"
       }
     },
     "docstring": null
