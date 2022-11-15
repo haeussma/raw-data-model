@@ -31,6 +31,7 @@
 - __data__
   - Type: Data
   - Description: Replicates of a measurement
+  - Multiple: True
 
 ### Data
 
