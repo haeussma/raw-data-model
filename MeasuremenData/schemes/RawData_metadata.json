@@ -1,0 +1,49 @@
+{
+  "docstring": "",
+  "enums": [],
+  "external": {},
+  "MeasurementData": {
+    "attributes": {
+      "pH": {
+        "description": "pH of the experiment."
+      },
+      "name": {
+        "description": "Name of the experiment."
+      },
+      "date": {
+        "description": "Date of the measurement."
+      },
+      "time": {
+        "description": "Time axis of the experiment.",
+        "multiple": "True"
+      },
+      "temperature": {
+        "description": "Temperature of the reaction."
+      },
+      "measurements": {
+        "description": "Date of the measurement."
+      }
+    },
+    "docstring": null
+  },
+  "Measurements": {
+    "attributes": {
+      "initial_substrate": {
+        "description": "Initial substrate concentration of the reaction."
+      },
+      "data": {
+        "description": "Replicates of a measurement"
+      }
+    },
+    "docstring": null
+  },
+  "Data": {
+    "attributes": {
+      "replicates": {
+        "description": "Measurement series.",
+        "multiple": "True"
+      }
+    },
+    "docstring": null
+  }
+}
