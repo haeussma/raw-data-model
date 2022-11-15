@@ -9,7 +9,7 @@ classDiagram
         +datetime date
         +float[0..*] time
         +float temperature
-        +Measurements measurements
+        +Measurements[0..*] measurements
     }
     
     class Measurements {

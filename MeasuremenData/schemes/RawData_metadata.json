@@ -21,7 +21,8 @@
         "description": "Temperature of the reaction."
       },
       "measurements": {
-        "description": "Date of the measurement."
+        "description": "Date of the measurement.",
+        "multiple": "True"
       }
     },
     "docstring": null
