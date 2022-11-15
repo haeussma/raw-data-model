@@ -2,38 +2,38 @@
 
 ### MeasurementData
 
-- **pH**
+- __pH__
   - Type: float
   - Description: pH of the experiment.
-- **name**
+- __name__
   - Type: string
   - Description: Name of the experiment.
-- **date**
+- __date__
   - Type: datetime
   - Description: Date of the measurement.
-- **time**
+- __time__
   - Type: float
   - Description: Time axis of the experiment.
   - Multiple: True
-- **temperature**
+- __temperature__
   - Type: float
   - Description: Temperature of the reaction.
-- **measurements**
+- __measurements__
   - Type: Measurements
   - Description: Date of the measurement.
 
 ### Measurements
 
-- **initial_substrate**
+- __initial_substrate__
   - Type: float
   - Description: Initial substrate concentration of the reaction.
-- **data**
+- __data__
   - Type: Data
   - Description: Replicates of a measurement.
 
 ### Data
 
-- **replicates**
+- __replicates__
   - Type: float
   - Description: Measurement series.
   - Multiple: True
