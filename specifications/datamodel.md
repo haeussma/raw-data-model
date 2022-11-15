@@ -29,7 +29,7 @@
   - Description: Initial substrate concentration of the reaction.
 - __data__
   - Type: Data
-  - Description: Replicates of a measurement.
+  - Description: Replicates of a measurement
 
 ### Data
 
